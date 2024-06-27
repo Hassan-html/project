@@ -98,11 +98,12 @@ const EventDetails = () => {
           <div className="relative aspect-w-16 aspect-h-9 h-[600px]">
             <Image
               src={event.seatmap.staticUrl}
-              alt="Seat Map"
+              alt={event.seatmap.staticUrl}
               layout="fill"
               objectFit="contain"
             />
           </div>
+          {event.seatmap.staticUrl}
         </div>
       )}
 
