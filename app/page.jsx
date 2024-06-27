@@ -10,7 +10,7 @@ export default function Home() {
       .get(
         "https://app.ticketmaster.com/discovery/v2/events.json?apikey=46TH7UBV1vDsgzMwKQX58kZn1CnRqUVW"
       )
-      .then((res: any) => {
+      .then((res) => {
         setData(res.data._embedded.events);
         console.log(res);
       })
