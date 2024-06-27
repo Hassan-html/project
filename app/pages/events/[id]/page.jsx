@@ -108,8 +108,9 @@ const EventDetails = () => {
 
       <div className="mb-6">
         <h2 className="text-2xl font-semibold">Promoter</h2>
-        <p>{event.promoter.name}</p>
-        <p>{event.promoter.description}</p>
+        <p>{event.promoter?.name ?? "N/A"}</p>
+
+        <p>{event.promoter?.description ?? "N/A"}</p>
       </div>
 
       {event.products && (
