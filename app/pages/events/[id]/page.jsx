@@ -97,7 +97,10 @@ const EventDetails = () => {
           <h2 className="text-2xl font-semibold">Seat Map</h2>
           <div className="relative aspect-w-16 aspect-h-9 h-[600px]">
             <Image
-              src={event.seatmap.staticUrl}
+              priority
+              src={`/api/proxy-image?url=${encodeURIComponent(
+                event.seatmap.staticUrl
+              )}`}
               alt={event.seatmap.staticUrl}
               layout="fill"
               objectFit="contain"
